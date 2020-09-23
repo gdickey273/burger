@@ -13,6 +13,21 @@ router.get("/", function(req, res){
     //res.render("index", hbsObj);
   });
 
+});
+
+router.post("/api/burgers", function(req, res){
+  burger.insertOne(["burger_name", "devoured"], [req.body.name, req.body.devoured], function(result){
+    res.json(result);
+  });
+});
+
+router.put("/api/burgers/:id", function(req, res){
+  burger.updateOne({devoured: req.body.devoured}, `id = ${req.body.id}`, function(result){
+    if(result.changedRows === 0){
+      return res.status(404).end();
+    }
+    res.status(202).end();
+  })
 })
 
 module.exports = router;
