@@ -27,3 +27,24 @@ li button {
  
   
 }
+#not-devoured{
+  border: 2px solid black;
+}
+
+#devoured{
+  border: 2px solid black;
+}
+
+#new-burger{
+  border: 2px solid black;
+  padding: 5px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+#new-burger button{
+  float: left;
+  
+}
