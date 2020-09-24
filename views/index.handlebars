@@ -1,6 +1,6 @@
 <header>
 
-<img src= "/assets/img/burger.jpeg">
+<img src= "/assets/img/burger.png">
 <h1>Eat-Da-Burger!</h1>
 
 </header>
@@ -8,6 +8,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <h5>Not Yet Devoured!</h5>
       <ul>
         {{#each burgers}}
           {{#unless devoured}}
@@ -26,6 +27,7 @@
 
     
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <h5>Already Devoured!</h5>
       <ul>
         {{#each burgers}}
           {{#if devoured}}
